@@ -1,0 +1,145 @@
+const mongoose = require('mongoose');
+
+const {Schema} = mongoose;
+
+const userSchema = new Schema({
+    uuid:{
+        type:String,
+    },
+    fullname:{
+        type:String,
+    },
+    username:{
+        type:String,
+    },
+    mobileno:{
+        type:Number,
+    },
+    email:{
+        type:String,
+    },
+    facebook_id:{
+        type:String,
+    },
+    email_id:{
+        type:String,
+    },
+    referal_id:{
+        type:String,
+    },
+    refered_by:{
+        type:String,
+    },
+    first_deposit:{
+        type:Boolean,
+    },
+    firebaseKey:{
+        type:String
+    },
+    ref_count:{
+        type:Number,
+    },
+    kycVerified :  { 
+        type: String, 
+        default: 'e' 
+    }, // p= pending , v =verfied , e = empty , r = reject
+    add_bonus:{
+        type:Boolean,
+    },
+    add_referral:{
+        type:Boolean,
+    },
+    currency_type:{
+        type:String,
+    },
+    country_name:{
+        type:String,
+    },
+    withdraw_verify:{
+        type:Boolean,
+        default: false
+    },
+    passcode:{
+        type:Number,
+    },
+    currency_country:{
+        type:Boolean,
+        default:true
+
+    },
+    call_back:{
+        type:Boolean,
+    },
+    language:{
+        type:String
+    },
+    otp_login:{
+        type:String,
+    },
+    number_verify:{
+        type:Boolean,
+        default:false
+    },
+    email_verify:{
+        type:Boolean,
+        default:false,
+    },
+    email_verify_code:{
+        type:String,
+    },
+    policy_accept:{
+        type:Boolean,
+        default:false,
+    },
+    kyc_verification:{
+        type:Boolean,
+        default:false,
+    },
+    current_withdraw:{
+        type:Boolean,
+        default:true
+    },
+    call_back:{
+        type:Boolean,
+    },
+    vip_user:{
+        type:Boolean,
+        default:false,
+    },
+    vip_comment:{
+        type:String,
+    },
+    rewards:{
+        type:Boolean,
+        default:false
+    },
+    block:{
+        type:Boolean,
+        default:false
+    },
+    demoAccount:{
+        type:Boolean,
+    },
+    add_nsr:{
+        type:Boolean,
+    },
+    add_interest:{
+        type:Boolean,
+    },
+    nsr_wallet:{
+        type:Boolean,
+    },
+    interest_wallet:{
+        type:Boolean
+    },
+    add_withdraw:{
+        type:Boolean
+    },
+    Addreferral:{
+        type:Boolean
+    }
+},{
+    timestamps:true,
+})
+
+module.exports = mongoose.model('user',userSchema)

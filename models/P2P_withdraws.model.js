@@ -1,0 +1,69 @@
+const mongoose = require("mongoose");
+
+const P2P_withdrawSchema = new mongoose.Schema({
+    UserId:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref: 'user'
+    },
+    usdt:{
+        type:String,
+    },
+    email:{
+        type:String,
+    },
+    phone_number:{
+        type:Number,
+    },
+    created_at:{
+        type:String,
+    },
+    network:{
+        type:String,
+    },
+    wallet_address:{
+        type:String,
+    },
+    remarks:{
+        type:String,
+    },
+    withdrawal_amount:{
+        type:Number,
+    },
+    confirmed_withdrawal:{
+        type:Number,
+    },
+    fees:{
+        type:Number
+    },
+    gas_fee:{
+        type:Number
+    },
+    transaction_fee:{
+        type:Number
+    },
+    bridging_fee:{
+        type:Number
+    },
+    tds:{
+        type:Number
+    },
+    status:{
+        type:String,
+    },
+    withdrawal_type:{
+        type:String
+    },
+    previous_transaction:{
+        type:String
+    },
+    transaction_type:{
+        type:String
+    },
+    coin:{
+        type:String
+    }
+},{
+    timestamps:true
+})
+
+module.exports = mongoose.model('P2P_withdraw',P2P_withdrawSchema,'P2P_withdraws')

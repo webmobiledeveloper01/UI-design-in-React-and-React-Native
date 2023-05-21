@@ -1,0 +1,35 @@
+{
+  "name": "ggo_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "api": "^4.5.1",
+    "aws-sdk": "^2.1198.0",
+    "axios": "^0.27.2",
+    "cors": "^2.8.5",
+    "currency-symbol-map": "^5.1.0",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "fcm-node": "^1.6.1",
+    "html-to-text": "^8.2.0",
+    "mongoose": "^6.3.4",
+    "multer": "^1.4.5-lts.1",
+    "node-schedule": "^2.1.0",
+    "nodemailer": "^6.7.7",
+    "nodemon": "^2.0.16",
+    "otp-generator": "^4.0.0",
+    "razorpay": "^2.8.1",
+    "socket.io": "^4.5.2",
+    "stripe": "^9.11.0",
+    "uuid": "^8.3.2",
+    "uuid-random": "^1.3.2"
+  }
+}
